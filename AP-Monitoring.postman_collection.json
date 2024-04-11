@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "fa029cef-0fbd-4c2c-ab66-8f47253caebb",
+		"name": "AP-Monitoring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20305944",
+		"_collection_link": "https://orange-resonance-958254.postman.co/workspace/My-Workspace~7e9a864d-e264-47fd-8ee1-55aa2a737cd3/collection/20305944-fa029cef-0fbd-4c2c-ab66-8f47253caebb?action=share&source=collection_link&creator=20305944"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "loign",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "This endpoint is used to authenticate an admin user by sending a POST request to the specified URL. The request should include a JSON payload in the raw request body type with the keys \"username\" and \"password\". The response will have a status code of 200 upon successful authentication."
+					},
+					"response": []
+				},
+				{
+					"name": "getadmin",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getDashboard",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"description": "Dokumentasi Unutk Bagian Admin"
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"testing\",\n    \"password\":\"testing\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/users/login",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateKomitmen",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GetKomitmen",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTg5ODI1NDcsImlkX2FkbWluIjoxLCJuYW1lIjoiSmFzYW1hcmdhIFB1c2F0Iiwicm9sZSI6Mn0.fqWae3Gc-ZQ3-_Uls6JY6rLtZbgfPutJjNy0p4kh4Sw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/users/getKomitmen",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"users",
+								"getKomitmen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateKomitmen",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "updateRealisasi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTg0OTU1MDQsImlkX2FkbWluIjoxLCJuYW1lIjoiSmFzYW1hcmdhIFB1c2F0Iiwicm9sZSI6Mn0.MeJeco75EasxkkXcl7j23aWYV-JbPpNzYXEe4I-Cwiw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nilai_kontrak_keseluruhan\": \"50000\",\n  \"nilai_kontrak_tahun\": \"2023\",\n  \"nama_penyedia_barang_dan_jasa\": \"Nama Penyedia\",\n  \"kualifikasi_penyedia\": \"UMKK\",\n  \"status_pencatatan\": \"PDN\",\n  \"persentase_pdn\": \"70.5\",\n  \"persentase_tkdn\": \"25.5\",\n  \"persentase_impor\": \"4.0\",\n  \"total_bobot\": \"100.0\",\n  \"realisasi_waktu_mulai_kontrak\": \"2023-11-01\",\n  \"realisasi_waktu_berakhir_kontrak\": \"2023-12-31\",\n  \"keterangan_lainnya\": \"Keterangan tambahan\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/users/update",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"users",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dashboard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDAxODgzODMsImlkX2FkbWluIjoyLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoxfQ.EA-fQrxHGWxCLeIKeSyfBVjeKJdfqjJ5ZfUuJtRiNjo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/users/getDasboardap",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"users",
+								"getDasboardap"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Users",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "ForgetPassword",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Folder",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseUrl",
+			"value": "http://127.0.0.1:4000"
+		}
+	]
+}
